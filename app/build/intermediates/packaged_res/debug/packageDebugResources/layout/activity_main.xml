@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_restaurant"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Plato 1: Cazuela -->
+    <ImageView
+        android:id="@+id/imagePlato1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cazuela"
+        app:layout_constraintTop_toBottomOf="@id/imageLogo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textPlato1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cazuela"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/imagePlato1"
+        app:layout_constraintTop_toTopOf="@id/imagePlato1"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/labelCantidad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant."
+        app:layout_constraintStart_toEndOf="@id/imagePlato1"
+        app:layout_constraintTop_toBottomOf="@id/textPlato1"
+        android:layout_marginStart="8dp" />
+
+    <EditText
+        android:id="@+id/inputCantidad1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/labelCantidad1"
+        app:layout_constraintTop_toTopOf="@id/labelCantidad1"
+        android:layout_marginStart="4dp" />
+
+    <TextView
+        android:id="@+id/subtotal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/inputCantidad1"
+        app:layout_constraintTop_toBottomOf="@id/inputCantidad1"
+        android:layout_marginTop="8dp" />
+
+    <!-- Plato 2: Pastel de Choclo -->
+    <ImageView
+        android:id="@+id/imagePlato2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pastel"
+        app:layout_constraintTop_toBottomOf="@id/imagePlato1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textPlato2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/imagePlato2"
+        app:layout_constraintTop_toTopOf="@id/imagePlato2"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/labelCantidad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cant."
+        app:layout_constraintStart_toEndOf="@id/imagePlato2"
+        app:layout_constraintTop_toBottomOf="@id/textPlato2"
+        android:layout_marginStart="8dp" />
+
+    <EditText
+        android:id="@+id/inputCantidad2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/labelCantidad2"
+        app:layout_constraintTop_toTopOf="@id/labelCantidad2"
+        android:layout_marginStart="4dp" />
+
+    <TextView
+        android:id="@+id/subtotal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/inputCantidad2"
+        app:layout_constraintTop_toBottomOf="@id/inputCantidad2"
+        android:layout_marginTop="8dp" />
+
+    <!-- Switch -->
+    <Switch
+        android:id="@+id/switchPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina"
+        app:layout_constraintTop_toBottomOf="@id/imagePlato2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Totales -->
+    <TextView
+        android:id="@+id/totalComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comida"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/switchPropina"
+        app:layout_constraintStart_toEndOf="@id/switchPropina"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:id="@+id/textTotalComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        app:layout_constraintTop_toTopOf="@id/totalComida"
+        app:layout_constraintStart_toEndOf="@id/totalComida"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/totalPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/totalComida"
+        app:layout_constraintStart_toStartOf="@id/totalComida"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textTotalPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        app:layout_constraintTop_toTopOf="@id/totalPropina"
+        app:layout_constraintStart_toEndOf="@id/totalPropina"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/totalFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/totalPropina"
+        app:layout_constraintStart_toStartOf="@id/totalPropina"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textTotalFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/totalFinal"
+        app:layout_constraintStart_toEndOf="@id/totalFinal"
+        android:layout_marginStart="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable cazuela
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable logo_restaurant
+drawable pastel
+id imageLogo
+id imagePlato1
+id imagePlato2
+id inputCantidad1
+id inputCantidad2
+id labelCantidad1
+id labelCantidad2
+id subtotal1
+id subtotal2
+id switchPropina
+id textPlato1
+id textPlato2
+id textTotalComida
+id textTotalFinal
+id textTotalPropina
+id totalComida
+id totalFinal
+id totalPropina
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Restaurant
+style Theme.Restaurant
+xml backup_rules
+xml data_extraction_rules
